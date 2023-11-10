@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "747459171781",
+    "project_id": "diario-78377",
+    "storage_bucket": "diario-78377.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:747459171781:android:fe6545f91aea8d7cec67ac",
+        "android_client_info": {
+          "package_name": "br.mateus.diario"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDt_j_zm4tDEVLBBoOMhtR4HnTHMDjZVPY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
