@@ -1,6 +1,7 @@
 {
   "project_info": {
     "project_number": "747459171781",
+    "firebase_url": "https://diario-78377-default-rtdb.firebaseio.com",
     "project_id": "diario-78377",
     "storage_bucket": "diario-78377.appspot.com"
   },
@@ -12,7 +13,20 @@
           "package_name": "br.mateus.diario"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "747459171781-d40bffganhptu417akjp38grtcb9c7j5.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "br.mateus.diario",
+            "certificate_hash": "3125300e31c9ea4e58907fc936651b22d41ab68c"
+          }
+        },
+        {
+          "client_id": "747459171781-bpm7ublne5cc08bnq5ofa1t2ghglfqc5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
           "current_key": "AIzaSyDt_j_zm4tDEVLBBoOMhtR4HnTHMDjZVPY"
@@ -20,7 +34,12 @@
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "747459171781-bpm7ublne5cc08bnq5ofa1t2ghglfqc5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         }
       }
     }

@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">Diario</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="e_mail">E-mail</string>
+    <string name="cadastre_se">Cadastre-se</string>
+    <string name="entrar">Entrar</string>
+    <string name="esqueci_minha_senha">Esqueci minha senha</string>
+    <string name="senha">Senha</string>
+    <string name="n_o_possui_uma_conta">Não possui uma conta?</string>
+    <string name="ou">ou</string>
 </resources>

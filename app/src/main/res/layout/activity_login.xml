@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".View.LoginActivity">
+
+    <EditText
+        android:id="@+id/idEmailL"
+        android:layout_width="360dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="18dp"
+        android:ems="10"
+        android:hint="@string/e_mail"
+        android:inputType="textEmailAddress"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.742"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:autofillHints="" />
+
+    <EditText
+        android:id="@+id/idSenhaL"
+        android:layout_width="363dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="12dp"
+        android:ems="10"
+        android:hint="@string/senha"
+        android:inputType="textPassword"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/idEmailL"
+        android:autofillHints="" />
+
+    <TextView
+        android:id="@+id/idCadastrarL"
+        android:layout_width="109dp"
+        android:layout_height="27dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="44dp"
+        android:text="@string/cadastre_se"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/idT1"
+        app:layout_constraintTop_toBottomOf="@+id/idSenhaL"
+        tools:ignore="TextSizeCheck" />
+
+    <TextView
+        android:id="@+id/idT2"
+        android:layout_width="24dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="192dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/ou"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/idLoginL"
+        tools:ignore="TextSizeCheck" />
+
+    <TextView
+        android:id="@+id/idRecuperarL"
+        android:layout_width="212dp"
+        android:layout_height="27dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/esqueci_minha_senha"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/idSenhaL"
+        tools:ignore="TextSizeCheck" />
+
+    <Button
+        android:id="@+id/idLoginL"
+        android:layout_width="128dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="144dp"
+        android:layout_marginTop="72dp"
+        android:text="@string/entrar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/idT1" />
+
+    <TextView
+        android:id="@+id/idT1"
+        android:layout_width="205dp"
+        android:layout_height="29dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="44dp"
+        android:text="@string/n_o_possui_uma_conta"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/idSenhaL"
+        tools:ignore="TextSizeCheck" />
+
+    <com.google.android.gms.common.SignInButton
+        android:id="@+id/botaoGoogle"
+        android:layout_width="180dp"
+        android:layout_height="70dp"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginStart="112dp"
+        android:layout_marginTop="16dp"
+        android:theme="@style/Widget.AppCompat.Button.Colored"
+        android:visibility="visible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/idT2" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

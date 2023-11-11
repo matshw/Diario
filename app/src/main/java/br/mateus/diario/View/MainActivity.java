@@ -1,8 +1,10 @@
-package br.mateus.diario;
+package br.mateus.diario.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import br.mateus.diario.R;
 
 public class MainActivity extends AppCompatActivity {
 
