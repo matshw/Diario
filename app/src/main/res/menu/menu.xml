@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/novoPensamento"
+        android:title="Novo Pensamento"/>
+    <item
+        android:id="@+id/Pensamentos"
+        android:title="Lista de Pensamentos" />
+    <item
+        android:id="@+id/Calendario"
+        android:title="Calendário" />
+</menu>

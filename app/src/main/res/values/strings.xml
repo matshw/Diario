@@ -9,4 +9,7 @@
     <string name="senha">Senha</string>
     <string name="n_o_possui_uma_conta">Não possui uma conta?</string>
     <string name="ou">ou</string>
+    <string name="cadastrar">Cadastrar</string>
+    <string name="fecha">fecha</string>
+    <string name="abre">abre</string>
 </resources>

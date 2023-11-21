@@ -23,16 +23,16 @@
 
     <EditText
         android:id="@+id/idSenhaL"
-        android:layout_width="363dp"
-        android:layout_height="48dp"
+        android:layout_width="360dp"
+        android:layout_height="52dp"
         android:layout_marginStart="24dp"
         android:layout_marginTop="12dp"
+        android:autofillHints=""
         android:ems="10"
         android:hint="@string/senha"
         android:inputType="textPassword"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/idEmailL"
-        android:autofillHints="" />
+        app:layout_constraintTop_toBottomOf="@+id/idEmailL" />
 
     <TextView
         android:id="@+id/idCadastrarL"

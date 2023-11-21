@@ -66,22 +66,13 @@ public class LoginActivity extends AppCompatActivity {
                 loginGoogle();
             }
         });
-        login();
-    }
-    private final ActivityResultLauncher<Intent> googleSignInLauncher = registerForActivityResult(
-            new ActivityResultContracts.StartActivityForResult(),
-            new ActivityResultCallback<ActivityResult>() {
-                @Override
-                public void onActivityResult(ActivityResult result) {
-                    if (result.getResultCode() == Activity.RESULT_OK) {
+        clique();
 
-                    }
-                }
-            }
-    );
+    }
+
     private void loginGoogle(){
         Intent signInIntent = googleSignInClient.getSignInIntent();
-        googleSignInLauncher.launch(signInIntent);
+        startActivityForResult(signInIntent, 1);
     }
 
     private void signInGoogle(String token){
@@ -135,6 +126,26 @@ public class LoginActivity extends AppCompatActivity {
                 }else{
                     Toast.makeText(LoginActivity.this, "Ocorreu um erro, tente novamente", Toast.LENGTH_SHORT).show();
                 }
+            }
+        });
+    }
+    private void clique(){
+        login.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                login();
+            }
+        });
+        cadastrar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getApplicationContext(), CadastroActivity.class));
+            }
+        });
+        recuperar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getApplicationContext(), RecuperarActivity.class));
             }
         });
     }

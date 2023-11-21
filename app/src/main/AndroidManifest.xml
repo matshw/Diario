@@ -13,9 +13,21 @@
         android:theme="@style/Theme.Diario"
         tools:targetApi="31">
         <activity
+            android:name=".View.RecycleActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ViewModel.AdapterR"
+            android:exported="false" />
+        <activity
+            android:name=".View.RecuperarActivity"
+            android:exported="false" />
+        <activity
+            android:name=".View.CadastroActivity"
+            android:exported="false" />
+        <activity
             android:name=".View.MainActivity"
             android:exported="false"
-            android:theme="@style/Theme.Diario"/>
+            android:theme="@style/Theme.Diario" />
         <activity
             android:name=".View.LoginActivity"
             android:exported="true">
