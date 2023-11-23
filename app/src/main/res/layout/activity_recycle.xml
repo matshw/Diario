@@ -5,19 +5,17 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/drawerLayout">
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ViewModel.AdapterR">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/idRecycle"
-        android:layout_width="373dp"
-        android:layout_height="426dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="248dp"
+        android:layout_width="386dp"
+        android:layout_height="727dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="72dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -25,9 +23,11 @@
         android:id="@+id/textView2"
         android:layout_width="260dp"
         android:layout_height="40dp"
-        android:layout_marginStart="62dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="16dp"
         android:text="Lista de Pensamentos"
+        android:textAlignment="center"
+        android:textSize="25dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

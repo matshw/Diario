@@ -7,9 +7,17 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Gravity;
+import android.view.LayoutInflater;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.Button;
+import android.widget.LinearLayout;
+import android.widget.PopupWindow;
 import android.widget.Toast;
 
 import com.google.android.material.navigation.NavigationView;
@@ -52,6 +60,12 @@ public class RecycleActivity extends AppCompatActivity implements NavigationView
         toggle.syncState();
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         listar();
+        adapter.setOnItemLongClickListener(new AdapterR.OnItemLongClickListener() {
+            @Override
+            public void onItemLongClick(int position, View view) {
+                showPopup(view);
+            }
+        });
     }
 
     public void listar(){
@@ -64,7 +78,7 @@ public class RecycleActivity extends AppCompatActivity implements NavigationView
                     Diario diario = item.getValue(Diario.class);
                     listaDiario.add(diario);
                 }
-                recyclerView.setAdapter(new AdapterR(listaDiario));
+                adapter.notifyDataSetChanged();
             }
 
             @Override
@@ -83,6 +97,14 @@ public class RecycleActivity extends AppCompatActivity implements NavigationView
             Intent intent = new Intent(RecycleActivity.this, RecycleActivity.class);
             startActivity(intent);
             return true;
+        }else if(id == R.id.Notificacao){
+            Intent intent = new Intent(RecycleActivity.this, NotificationActivity.class);
+            startActivity(intent);
+            return true;
+        } else if (id == R.id.Informacoes) {
+            Intent intent = new Intent(RecycleActivity.this, InfoActivity.class);
+            startActivity(intent);
+            return true;
         }
         return false;
     }
@@ -91,4 +113,47 @@ public class RecycleActivity extends AppCompatActivity implements NavigationView
             return true;
         return super.onOptionsItemSelected(item);
     }
+    private void showPopup(View anchorView) {
+
+        LayoutInflater layoutInflater = (LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        View popupView = layoutInflater.inflate(R.layout.popup_layout, null);
+
+        PopupWindow popupWindow = new PopupWindow(
+                popupView,
+                LinearLayout.LayoutParams.WRAP_CONTENT,
+                LinearLayout.LayoutParams.WRAP_CONTENT
+        );
+
+        Button editarButton = popupView.findViewById(R.id.editarButton);
+        Button excluirButton = popupView.findViewById(R.id.excluirButton);
+
+        editarButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                popupWindow.dismiss();
+            }
+        });
+
+        excluirButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                int position = recyclerView.getChildAdapterPosition(anchorView);
+
+                Diario itemRemovido = listaDiario.get(position);
+
+
+                if (itemRemovido != null && itemRemovido.getId() != null) {
+                    DatabaseReference diarioRef = databaseReference.child("pensamentos").child(itemRemovido.getId());
+                    diarioRef.removeValue();
+                }
+
+                listaDiario.remove(position);
+                adapter.notifyItemRemoved(position);
+                popupWindow.dismiss();
+            }
+        });
+
+        popupWindow.showAtLocation(anchorView, Gravity.CENTER, 0, 0);
+    }
+
 }

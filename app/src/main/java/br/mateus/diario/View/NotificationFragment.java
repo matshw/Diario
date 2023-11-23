@@ -15,6 +15,7 @@ import androidx.fragment.app.Fragment;
 import java.util.Calendar;
 
 import br.mateus.diario.R;
+import br.mateus.diario.ViewModel.NotificationReceiver;
 
 public class NotificationFragment extends Fragment {
 
@@ -43,24 +44,20 @@ public class NotificationFragment extends Fragment {
     }
 
     private void scheduleNotification() {
-        // Obter o horário selecionado do TimePicker
         int hour = timePicker.getCurrentHour();
         int minute = timePicker.getCurrentMinute();
 
-        // Lógica para agendar a notificação
-        // Utilize AlarmManager e BroadcastReceiver ou WorkManager para agendar a notificação diária
-        // Criar e exibir a notificação com o NotificationManager
-
-        // Exemplo simples (não funcional) de agendamento de notificação:
         Calendar calendar = Calendar.getInstance();
         calendar.set(Calendar.HOUR_OF_DAY, hour);
         calendar.set(Calendar.MINUTE, minute);
         calendar.set(Calendar.SECOND, 0);
 
-        Intent intent = new Intent(getContext(), NotificationFragment.class);
-        PendingIntent pendingIntent = PendingIntent.getBroadcast(getContext(), 0, intent, PendingIntent.FLAG_UPDATE_CURRENT);
+        Intent intent = new Intent(requireContext(), NotificationReceiver.class);
+        PendingIntent pendingIntent = PendingIntent.getBroadcast(requireContext(), 0, intent, PendingIntent.FLAG_UPDATE_CURRENT);
 
         AlarmManager alarmManager = (AlarmManager) requireActivity().getSystemService(Context.ALARM_SERVICE);
+
+        // Defina o tipo de alarme para repetir diariamente
         alarmManager.setRepeating(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), AlarmManager.INTERVAL_DAY, pendingIntent);
     }
 }

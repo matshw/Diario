@@ -16,34 +16,39 @@
         <!-- Título -->
         <TextView
             android:id="@+id/idTituloR"
-            android:layout_width="match_parent"
+            android:layout_width="370dp"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:contentDescription="Titulo"
+            android:hint="Titulo"
             android:textSize="18sp"
-            android:textStyle="bold"
-            android:layout_marginBottom="4dp"/>
+            android:textStyle="bold" />
 
         <!-- Descrição -->
         <TextView
             android:id="@+id/idDescricaoR"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="14sp"
-            android:layout_marginBottom="4dp"/>
+            android:layout_marginBottom="4dp"
+            android:hint="Descricao"
+            android:textSize="14sp" />
 
         <!-- Humor -->
         <TextView
             android:id="@+id/idHumorR"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="14sp"
-            android:layout_marginBottom="4dp"/>
+            android:layout_marginBottom="4dp"
+            android:hint="Humor"
+            android:textSize="14sp" />
 
         <!-- Data -->
         <TextView
             android:id="@+id/idDataR"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="12sp"/>
+            android:hint="Data"
+            android:textSize="12sp" />
     </LinearLayout>
 
 

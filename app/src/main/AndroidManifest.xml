@@ -13,6 +13,12 @@
         android:theme="@style/Theme.Diario"
         tools:targetApi="31">
         <activity
+            android:name=".View.InfoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".View.NotificationActivity"
+            android:exported="false" />
+        <activity
             android:name=".View.RecycleActivity"
             android:exported="false" />
         <activity

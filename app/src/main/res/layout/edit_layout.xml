@@ -1,0 +1,29 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <EditText
+        android:id="@+id/editTitulo"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:hint="Novo título" />
+
+    <EditText
+        android:id="@+id/editDescricao"
+        android:layout_width="match_parent"
+        android:layout_height="63dp"
+        android:hint="Nova descrição" />
+
+    <EditText
+        android:id="@+id/editHumor"
+        android:layout_width="407dp"
+        android:layout_height="61dp"
+        android:hint="Novo humor" />
+
+    <Button
+        android:id="@+id/btnSalvarEdicao"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Salvar" />
+</LinearLayout>

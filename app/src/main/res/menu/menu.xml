@@ -7,6 +7,9 @@
         android:id="@+id/Pensamentos"
         android:title="Lista de Pensamentos" />
     <item
-        android:id="@+id/Calendario"
-        android:title="Calendário" />
+        android:id="@+id/Notificacao"
+        android:title="Notificação" />
+    <item
+        android:id="@+id/Informacoes"
+        android:title="Informações" />
 </menu>
